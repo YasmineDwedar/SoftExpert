@@ -25,7 +25,7 @@ class CarAdaptor(var context: Context, var arrName: List<Data>)  : RecyclerView.
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.binding?.apply {
 
-            Glide.with(context).load(arrName[position].imageUrl).fitCenter().override(500, 500).into(carImg)
+            Glide.with(context).load(arrName[position].imageUrl).placeholder(R.drawable.ic_placeholder_1).fitCenter().override(500, 500).into(carImg)
             compJobTitle.text=arrName[position].brand
             compName.text=arrName[position].isUsed.toString()
         }
